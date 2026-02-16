@@ -1,0 +1,18 @@
+recipes:
+
+- name: "T2 Light Missile Launcher"
+  recipe_type: "BPC"
+  base_item: "Light Missile Launcher"
+  me_level: 2
+  te_level: 2
+  materials:
+    Tritanium: 2000
+    Pyerite: 1000
+    Mexallon: 500
+    Isogen: 200
+    Morphite: 50
+  upgrade_paths:
+    - type: "invention"
+      datacores: 8
+      decryptor: "Test Reports"
+      chance: 0.4

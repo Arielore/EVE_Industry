@@ -1,0 +1,13 @@
+bpcs:
+
+- name: "T2 Light Missile Launcher"
+  source_bpo: "Light Missile Launcher"
+  runs_remaining: 10
+  location: "Keberz"
+  category: "module_t2"
+  materials:
+    Tritanium: 2000
+    Pyerite: 1000
+    Mexallon: 500
+    Isogen: 200
+    Morphite: 50

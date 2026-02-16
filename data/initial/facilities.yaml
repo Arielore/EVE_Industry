@@ -1,0 +1,43 @@
+facilities:
+
+- name: "Empire Reforged"
+  system: "Keberz"
+  region: "Khanid"
+  facility_type: "Azbel"
+  owner: "Brave Empire"
+  services: ["manufacturing", "research", "invention"]
+  manufacturing_slots: 10
+  research_slots: 8
+  cost_index: 0.035
+  rigs:
+    - name: "Standup L-Set Basic Ship Manufacturing Efficiency I"
+      bonus: "-2% time"
+  notes: "Main Empire manufacturing hub"
+
+- name: "Starforge of Bravery"
+  system: "UALX-3"
+  region: "The Citadel"
+  facility_type: "Sotiyo"
+  owner: "Brave Collective"
+  services: ["manufacturing", "research", "invention"]
+  manufacturing_slots: 15
+  research_slots: 10
+  cost_index: 0.0659
+  rigs:
+    - name: "Standup XL-Set Ship Manufacturing Efficiency I"
+      bonus: "-3% material"
+  notes: "Capital manufacturing disabled"
+
+- name: "The Science Lounge"
+  system: "UALX-3"
+  region: "The Citadel"
+  facility_type: "Sotiyo"
+  owner: "Brave Collective"
+  services: ["research", "invention"]
+  manufacturing_slots: 0
+  research_slots: 20
+  cost_index: 0.0659
+  rigs:
+    - name: "Standup XL-Set Laboratory Optimization I"
+      bonus: "-2% time"
+  notes: "Research and invention only"

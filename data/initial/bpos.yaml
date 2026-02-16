@@ -1,0 +1,1325 @@
+bpos:
+
+- name: "Capital Capacitor Battery"
+  me_level: 9
+  te_level: 18
+  location: "Keberz"
+  category: "capital_components"
+  materials: {}
+
+- name: "Capital Industrial Core I"
+  me_level: 8
+  te_level: 2
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Capital Shield Booster I"
+  me_level: 7
+  te_level: 2
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Bastion Module I"
+  me_level: 10
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Quad 3500mm Siege Artillery I"
+  me_level: 9
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Siege Module I"
+  me_level: 8
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Hexa 2500mm Repeating Cannon I"
+  me_level: 8
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Triage Module I"
+  me_level: 7
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "XL Cruise Missile Launcher I"
+  me_level: 8
+  te_level: 0
+  location: "Keberz"
+  category: "capital_components"
+  materials: {}
+
+- name: "Clone Vat Bay I"
+  me_level: 7
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Capital Emergency Hull Energizer I"
+  me_level: 6
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Capital Tractor Beam I"
+  me_level: 4
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Capital Energy Neutralizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Covert Jump Portal Generator I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Covert Cynosural Field Generator I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Iron Charge XL"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Iridium Charge XL"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "capital_components"
+  materials: {}
+
+- name: "Oxygen Fuel Block"
+  me_level: 10
+  te_level: 10
+  location: "UALX-3"
+  category: "fuel_consumables"
+  materials: {}
+
+- name: "Nanite Repair Paste"
+  me_level: 10
+  te_level: 4
+  location: "UALX-3"
+  category: "fuel_consumables"
+  materials: {}
+
+- name: "Cap Booster 3200"
+  me_level: 10
+  te_level: 0
+  location: "UALX-3"
+  category: "fuel_consumables"
+  materials: {}
+
+- name: "Slasher"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ships"
+  materials: {}
+
+- name: "Burst"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ships"
+  materials: {}
+
+- name: "Breacher"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ships"
+  materials: {}
+
+- name: "Vigil"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ships"
+  materials: {}
+
+- name: "Amarr Shuttle"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ships"
+  materials: {}
+
+- name: "Gallente Shuttle"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ships"
+  materials: {}
+
+- name: "Light Missile Launcher I"
+  me_level: 0
+  te_level: 2
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Rocket Launcher I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Rapid Light Missile Launcher I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Missile Guidance Enhancer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Missile Guidance Computer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Ballistic Control System I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Magnetic Field Stabilizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Gyrostabilizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Quad 800mm Repeating Cannon I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "800mm Repeating Cannon I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "220mm Vulcan AutoCannon I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Dual 180mm AutoCannon I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "150mm Light AutoCannon I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "200mm AutoCannon I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "125mm Gatling AutoCannon I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Gatling Pulse Laser I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Dual Light Pulse Laser I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Dual Light Beam Laser I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Regulated Compact Triple Neutron Blaster Cannon"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Regulated Compact Ion Siege Blaster"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Carbide Compact Dual 1000mm Railgun"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Small Proton Smartbomb I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Large Proton Smartbomb I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Large Plasma Smartbomb I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Large Graviton Smartbomb I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Large EMP Smartbomb I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "5MN Microwarpdrive I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "500MN Microwarpdrive I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "100MN Afterburner I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "10MN Afterburner I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "1MN Afterburner I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Damage Control I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Small Armor Repairer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Medium Armor Repairer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Large Armor Repairer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "EM Armor Hardener I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Thermal Armor Hardener I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Kinetic Armor Hardener I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Explosive Armor Hardener I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "100mm Steel Plates I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "EM Energized Membrane I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Thermal Energized Membrane I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Kinetic Energized Membrane I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Explosive Energized Membrane I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Multispectrum Energized Membrane I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Layered Energized Membrane I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Explosive Coating I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Multispectrum Coating I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Medium Shield Extender I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Small Shield Extender I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Medium Shield Booster I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Shield Boost Amplifier I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "EM Shield Amplifier I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Thermal Shield Amplifier I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Kinetic Shield Amplifier I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Stasis Webifier I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Warp Scrambler I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Signal Distortion Amplifier I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Multispectral ECM I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Magnetometric ECM I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Gravimetric ECM I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Sensor Booster I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Remote Tracking Computer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Heavy Stasis Grappler I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Small Capacitor Booster I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Medium Capacitor Booster I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Heavy Capacitor Booster I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Medium Cap Battery I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Small Energy Neutralizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Medium Energy Neutralizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Heavy Energy Neutralizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Small Remote Capacitor Transmitter I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Signal Amplifier I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Auto Targeting System I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Omnidirectional Tracking Link I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Omnidirectional Tracking Enhancer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Drone Navigation Computer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Drone Link Augmentor I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Medium Drone Mining Augmentor I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Small Drone Mining Augmentor I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Ice Harvester Upgrade I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Mining Laser Upgrade I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Medium Ice Harvester Accelerator I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "modules_t1"
+  materials: {}
+
+- name: "Large Cargohold Optimization I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Medium Cargohold Optimization I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Large Auxiliary Nano Pump I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Large Kinetic Armor Reinforcer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Large Explosive Armor Reinforcer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Large Hyperspatial Velocity Optimizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Medium Hyperspatial Velocity Optimizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Small Hyperspatial Velocity Optimizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Medium Capacitor Control Circuit I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Medium Ancillary Current Router I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Medium Processor Overclocking Unit I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Small Processor Overclocking Unit I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Medium Particle Dispersion Projector I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Small Gravity Capacitor Upgrade I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Small Core Defense Field Extender I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Medium Polycarbon Engine Housing I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "rigs"
+  materials: {}
+
+- name: "Warrior I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "drones"
+  materials: {}
+
+- name: "Hobgoblin I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "drones"
+  materials: {}
+
+- name: "Acolyte I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "drones"
+  materials: {}
+
+- name: "Mining Drone I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "drones"
+  materials: {}
+
+- name: "Ice Harvesting Drone I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "drones"
+  materials: {}
+
+- name: "Salvage Drone I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "drones"
+  materials: {}
+
+- name: "Simple Asteroid Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Coherent Asteroid Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Variegated Asteroid Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Complex Asteroid Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Mercoxit Asteroid Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Common Moon Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Uncommon Moon Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Rare Moon Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Exceptional Moon Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Ubiquitous Moon Mining Crystal Type A I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "mining_crystals"
+  materials: {}
+
+- name: "Inferno Torpedo"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Cap Booster 200"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Active Shielding Charge"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Shield Harmonizing Charge"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Shield Extension Charge"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Mining Laser Optimization Charge"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Mining Laser Field Enhancement Charge"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Skirmish Command Burst I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Shield Command Burst I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Uranium Charge S"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Tungsten Charge S"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Thorium Charge S"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Plutonium Charge S"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Iron Charge S"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Iridium Charge S"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Armor Thermal Resistance Script"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ammunition_charges"
+  materials: {}
+
+- name: "Station Container"
+  me_level: 0
+  te_level: 6
+  location: "UALX-3"
+  category: "containers"
+  materials: {}
+
+- name: "Giant Secure Container"
+  me_level: 8
+  te_level: 2
+  location: "UALX-3"
+  category: "containers"
+  materials: {}
+
+- name: "Enormous Freight Container"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "containers"
+  materials: {}
+
+- name: "Large Audit Log Secure Container"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "containers"
+  materials: {}
+
+- name: "R.A.M.- Starship Tech"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "R.A.M.- Weapon Tech"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "R.A.M.- Shield Tech"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "R.A.M.- Robotics"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "R.A.M.- Energy Tech"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "R.A.M.- Electronics"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "R.A.M.- Armor/Hull Tech"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "R.Db - CreoDron"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "Pulse Shield Emitter"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "Ion Thruster"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "ram_components"
+  materials: {}
+
+- name: "Standup Radar ECM Script"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "structure_scripts"
+  materials: {}
+
+- name: "Standup Magnetometric ECM Script"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "structure_scripts"
+  materials: {}
+
+- name: "Standup Ladar ECM Script"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "structure_scripts"
+  materials: {}
+
+- name: "Standup Gravimetric ECM Script"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "structure_scripts"
+  materials: {}
+
+- name: "Standup Focused Warp Scrambling Script"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "structure_scripts"
+  materials: {}
+
+- name: "Quest Survey Probe I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "probes_analyzers"
+  materials: {}
+
+- name: "Combat Scanner Probe I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "probes_analyzers"
+  materials: {}
+
+- name: "Core Scanner Probe I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "probes_analyzers"
+  materials: {}
+
+- name: "Core Probe Launcher I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "probes_analyzers"
+  materials: {}
+
+- name: "Expanded Probe Launcher I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "probes_analyzers"
+  materials: {}
+
+- name: "Relic Analyzer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "probes_analyzers"
+  materials: {}
+
+- name: "Data Analyzer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "probes_analyzers"
+  materials: {}
+
+- name: "Mobile Tractor Unit"
+  me_level: 3
+  te_level: 2
+  location: "UALX-3"
+  category: "miscellaneous"
+  materials: {}
+
+- name: "Mobile Depot"
+  me_level: 2
+  te_level: 0
+  location: "UALX-3"
+  category: "miscellaneous"
+  materials: {}
+
+- name: "Pulse Activated Nexus Invulnerability Core"
+  me_level: 5
+  te_level: 2
+  location: "UALX-3"
+  category: "miscellaneous"
+  materials: {}
+
+- name: "Networked Sensor Array"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "miscellaneous"
+  materials: {}
+
+- name: "Cynosural Field Generator I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "miscellaneous"
+  materials: {}
+
+- name: "Warp Core Stabilizer I"
+  me_level: 0
+  te_level: 0
+  location: "UALX-3"
+  category: "miscellaneous"
+  materials: {}
+

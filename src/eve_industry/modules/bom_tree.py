@@ -91,7 +91,13 @@ class BOMTreeBuilder:
                     t.typeID,
                     t.name_en as blueprint_name,
                     a.time as activity_time,
-                    GROUP_CONCAT(mt.name_en || ':' || m.quantity) as materials_str
+                    GROUP_CONCAT(
+                        CASE 
+                            WHEN mt.name_en IS NOT NULL AND mt.name_en != '' AND mt.name_en != 'nan' 
+                            THEN mt.name_en || ':' || m.quantity 
+                            ELSE NULL 
+                        END
+                    ) as materials_str
                 FROM types t
                 LEFT JOIN industryActivityProducts p ON t.typeID = p.typeID AND p.activityID = 1
                 LEFT JOIN types pt ON p.productTypeID = pt.typeID
@@ -99,6 +105,7 @@ class BOMTreeBuilder:
                 LEFT JOIN industryActivityMaterials m ON t.typeID = m.typeID AND m.activityID = 1
                 LEFT JOIN types mt ON m.materialTypeID = mt.typeID
                 WHERE pt.name_en = ? AND a.time IS NOT NULL
+                    AND pt.name_en IS NOT NULL AND pt.name_en != '' AND pt.name_en != 'nan'
                 GROUP BY t.typeID, t.name_en, a.time
                 LIMIT 1
             """, (item_name,))
@@ -106,20 +113,26 @@ class BOMTreeBuilder:
             row = cursor.fetchone()
             cursor.close()
             
-            if row and row[3]:  # Has materials
+            if row and row[3]:  # Has materials string
                 materials = {}
                 for mat_str in row[3].split(','):
-                    if ':' in mat_str:
+                    if mat_str and ':' in mat_str:
                         name, qty = mat_str.split(':', 1)
-                        materials[name.strip()] = float(qty)
+                        name = name.strip()
+                        if name and name != 'nan':
+                            try:
+                                materials[name] = float(qty)
+                            except ValueError:
+                                print(f"Warning: Could not convert quantity '{qty}' to float for material '{name}'")
                 
-                return {
-                    'blueprint_id': row[0],
-                    'blueprint_name': row[1],
-                    'activity_time': row[2],
-                    'materials': materials,
-                    'source': RecipeSource.SDE
-                }
+                if materials:  # Only return if we have valid materials
+                    return {
+                        'blueprint_id': row[0],
+                        'blueprint_name': row[1],
+                        'activity_time': row[2],
+                        'materials': materials,
+                        'source': RecipeSource.SDE
+                    }
         except Exception as e:
             print(f"Error finding SDE recipe for {item_name}: {e}")
         return None

@@ -286,6 +286,16 @@ yaml_handler.py:
 - Validate YAML structure against schemas
 - Convert between YAML and database formats
 
+bom_tree.py:
+
+- Bill of Materials (BOM) tree analysis for manufacturing planning
+- Recursively builds trees from final products back to raw materials
+- Supports both custom recipes and SDE manufacturing data
+- Generates flat BOMs with raw material totals
+- Creates operations sequences with timing for machine scheduling
+- Includes caching and intelligent raw material detection
+- Provides MaterialNode and BOMAnalysis data structures
+
 ## Database Module
 
 connection.py:

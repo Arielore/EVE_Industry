@@ -6,7 +6,7 @@ Provides thread-local connections and safe query execution.
 import threading
 from contextlib import contextmanager
 from pathlib import Path
-from typing import Optional, Union
+from typing import Optional, Union, Tuple
 
 import duckdb
 
@@ -52,20 +52,19 @@ class DatabaseConnection:
             cursor.close()
             raise
     
-    def execute(self, query: str, params: tuple = None):
+    def execute(self, query: str, params: Optional[Tuple] = None):
         """
-        Execute SQL query.
+        Execute SQL query that doesn't return results (INSERT, UPDATE, DELETE).
         
         Args:
             query: SQL query string
             params: Optional query parameters
         """
-        with self.cursor() as cursor:
-            if params:
-                cursor.execute(query, params)
-            else:
-                cursor.execute(query)
-            return cursor
+        conn = self.get_connection()
+        if params:
+            conn.execute(query, params)
+        else:
+            conn.execute(query)
     
     def execute_df(self, query: str, params: tuple = None):
         """

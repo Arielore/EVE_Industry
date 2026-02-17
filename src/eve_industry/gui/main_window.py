@@ -13,7 +13,8 @@ from eve_industry.gui.views.bpo_list_view import BPOListView
 from eve_industry.gui.views.bpc_inventory_view import BPCInventoryView
 from eve_industry.gui.views.recipes_view import RecipesView
 from eve_industry.gui.views.facilities_view import FacilitiesView
-from eve_industry.gui.views.settings_view import SettingsView
+from eve_industry.gui.views.intake_view import IntakeView
+from eve_industry.gui.views.sde_view import SDEView
 
 
 class MainWindow(QMainWindow):
@@ -52,7 +53,8 @@ class MainWindow(QMainWindow):
             'bpcs': BPCInventoryView,
             'recipes': RecipesView,
             'facilities': FacilitiesView,
-            'settings': SettingsView
+            'intake': IntakeView,
+            'sde': SDEView
         }
         
         # Set splitter sizes
@@ -75,7 +77,8 @@ class MainWindow(QMainWindow):
             ("BPC Inventory", "bpcs"),
             ("Recipes", "recipes"),
             ("Facilities", "facilities"),
-            ("Settings", "settings")
+            ("SDE", "sde"),
+            ("Intake", "intake")
         ]
         
         for text, view_name in buttons:
@@ -114,7 +117,8 @@ class MainWindow(QMainWindow):
             'bpcs': 'BPC Inventory',
             'recipes': 'Recipes',
             'facilities': 'Facilities',
-            'settings': 'Settings'
+            'sde': 'SDE',
+            'intake': 'Intake'
         }
         title = titles.get(view_name, 'EVE Industry')
         self.setWindowTitle(f"EVE Industry Management - {title}")

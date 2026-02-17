@@ -27,6 +27,8 @@ def create_tables():
         CREATE TABLE IF NOT EXISTS bpcs (
             name TEXT PRIMARY KEY,
             source_bpo TEXT,
+            me_level INTEGER,
+            te_level INTEGER,
             runs_remaining INTEGER,
             location TEXT,
             category TEXT,

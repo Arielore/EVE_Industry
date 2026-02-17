@@ -32,12 +32,6 @@ def load_bpcs_from_yaml(file_path: Path) -> List[Dict[str, Any]]:
     return data.get('bpcs', [])
 
 
-def load_recipes_from_yaml(file_path: Path) -> List[Dict[str, Any]]:
-    """Load recipes from YAML file."""
-    data = load_yaml_file(file_path)
-    return data.get('recipes', [])
-
-
 def load_facilities_from_yaml(file_path: Path) -> List[Dict[str, Any]]:
     """Load facilities from YAML file."""
     data = load_yaml_file(file_path)
@@ -91,12 +85,14 @@ def insert_bpcs(bpcs_data: List[Dict[str, Any]]) -> int:
             db.execute(
                 """
                 INSERT INTO bpcs 
-                (name, source_bpo, runs_remaining, location, category, materials_json)
-                VALUES (?, ?, ?, ?, ?, ?)
+                (name, source_bpo, me_level, te_level, runs_remaining, location, category, materials_json)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     bpc.get('name'),
                     bpc.get('source_bpo', ''),
+                    bpc.get('me_level', 0),
+                    bpc.get('te_level', 0),
                     bpc.get('runs_remaining', 0),
                     bpc.get('location', ''),
                     bpc.get('category', ''),
@@ -108,41 +104,6 @@ def insert_bpcs(bpcs_data: List[Dict[str, Any]]) -> int:
             print(f"Error inserting BPC {bpc.get('name')}: {e}")
     
     return inserted
-
-
-def insert_recipes(recipes_data: List[Dict[str, Any]]) -> int:
-    """Insert recipes into database."""
-    db = get_db()
-    inserted = 0
-    
-    for recipe in recipes_data:
-        try:
-            # First, try to delete any existing recipe with the same name
-            db.execute("DELETE FROM recipes WHERE name = ?", (recipe.get('name'),))
-            
-            # Then insert the new recipe
-            db.execute(
-                """
-                INSERT INTO recipes 
-                (name, recipe_type, base_item, me_level, te_level, materials_json, upgrade_paths_json)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-                """,
-                (
-                    recipe.get('name'),
-                    recipe.get('recipe_type', ''),
-                    recipe.get('base_item', ''),
-                    recipe.get('me_level', 0),
-                    recipe.get('te_level', 0),
-                    json.dumps(recipe.get('materials', {})),
-                    json.dumps(recipe.get('upgrade_paths', []))
-                )
-            )
-            inserted += 1
-        except Exception as e:
-            print(f"Error inserting recipe {recipe.get('name')}: {e}")
-    
-    return inserted
-
 
 def insert_facilities(facilities_data: List[Dict[str, Any]]) -> int:
     """Insert facilities into database."""
@@ -206,15 +167,7 @@ def load_all_initial_data():
         inserted = insert_bpcs(bpcs_data)
         print(f"  Loaded {inserted} BPCs from {bpcs_file.name}")
         total_inserted += inserted
-    
-    # Load recipes
-    recipes_file = data_dir / "recipes.yaml"
-    if recipes_file.exists():
-        recipes_data = load_recipes_from_yaml(recipes_file)
-        inserted = insert_recipes(recipes_data)
-        print(f"  Loaded {inserted} recipes from {recipes_file.name}")
-        total_inserted += inserted
-    
+     
     # Load facilities
     facilities_file = data_dir / "facilities.yaml"
     if facilities_file.exists():
@@ -256,6 +209,40 @@ def get_bpos_from_db() -> List[Dict[str, Any]]:
         return bpos
     except Exception as e:
         print(f"Error getting BPOs from database: {e}")
+        return []
+
+
+def get_bpcs_from_db() -> List[Dict[str, Any]]:
+    """Get all BPCs from database."""
+    db = get_db()
+    
+    try:
+        # Use connection directly to avoid cursor closure issues
+        conn = db.get_connection()
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT name, source_bpo, me_level, te_level, runs_remaining, location, category 
+            FROM bpcs 
+            ORDER BY name
+        """)
+        
+        bpcs = []
+        rows = cursor.fetchall()
+        cursor.close()
+        
+        for row in rows:
+            bpcs.append({
+                'name': row[0],
+                'source_bpo': row[1],
+                'me_level': row[2],
+                'te_level': row[3],
+                'runs_remaining': row[4],
+                'location': row[5],
+                'category': row[6]
+            })
+        return bpcs
+    except Exception as e:
+        print(f"Error getting BPCs from database: {e}")
         return []
 
 

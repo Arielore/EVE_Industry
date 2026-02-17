@@ -1,13 +1,257 @@
 bpcs:
-
-- name: "T2 Light Missile Launcher"
-  source_bpo: "Light Missile Launcher"
-  runs_remaining: 10
-  location: "Keberz"
-  category: "module_t2"
-  materials:
-    Tritanium: 2000
-    Pyerite: 1000
-    Mexallon: 500
-    Isogen: 200
-    Morphite: 50
+- name: 1MN Civilian Afterburner Blueprint
+  source_bpo: 1MN Civilian Afterburner
+  me_level: 5
+  te_level: 2
+  runs_remaining: 1
+  location: Trossere VII - Moon 3 - University of Caille
+  category: modules_t1
+  materials: {}
+- name: 75mm Gatling Rail I Blueprint
+  source_bpo: 75mm Gatling Rail I
+  me_level: 5
+  te_level: 2
+  runs_remaining: 5
+  location: Trossere VII - Moon 3 - University of Caille
+  category: modules_t1
+  materials: {}
+- name: Algos Blueprint
+  source_bpo: Algos
+  me_level: 10
+  te_level: 20
+  runs_remaining: 2
+  location: UALX-3 - The Science Lounge
+  category: ships
+  materials: {}
+- name: Anshar Blueprint
+  source_bpo: Anshar
+  me_level: 5
+  te_level: 10
+  runs_remaining: 1
+  location: UALX-3 - The Science Lounge
+  category: ships
+  materials: {}
+- name: Antimatter Charge S Blueprint
+  source_bpo: Antimatter Charge S
+  me_level: 5
+  te_level: 2
+  runs_remaining: 199
+  location: UALX-3 - The Science Lounge
+  category: ammunition_charges
+  materials: {}
+- name: Cap Booster 25 Blueprint
+  source_bpo: Cap Booster 25
+  me_level: 5
+  te_level: 2
+  runs_remaining: 2
+  location: Trossere VII - Moon 3 - University of Caille
+  category: ammunition_charges
+  materials: {}
+- name: Cap Booster 3200 Blueprint
+  source_bpo: Cap Booster 3200
+  me_level: 10
+  te_level: 0
+  runs_remaining: 200
+  location: UALX-3 - The Science Lounge
+  category: ammunition_charges
+  materials: {}
+- name: Capital Armor Plates Blueprint
+  source_bpo: Capital Armor Plates
+  me_level: 10
+  te_level: 20
+  runs_remaining: 3
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Capacitor Battery Blueprint
+  source_bpo: Capital Capacitor Battery
+  me_level: 8
+  te_level: 0
+  runs_remaining: 2
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Cargo Bay Blueprint
+  source_bpo: Capital Cargo Bay
+  me_level: 10
+  te_level: 20
+  runs_remaining: 13
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Construction Parts Blueprint
+  source_bpo: Capital Construction Parts
+  me_level: 10
+  te_level: 20
+  runs_remaining: 15
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Crystalline Carbonide Armor Plate Blueprint
+  source_bpo: Capital Crystalline Carbonide Armor Plate
+  me_level: 10
+  te_level: 20
+  runs_remaining: 200
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Fusion Reactor Unit Blueprint
+  source_bpo: Capital Fusion Reactor Unit
+  me_level: 10
+  te_level: 20
+  runs_remaining: 200
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Ion Thruster Blueprint
+  source_bpo: Capital Ion Thruster
+  me_level: 10
+  te_level: 20
+  runs_remaining: 200
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Jump Drive Blueprint
+  source_bpo: Capital Jump Drive
+  me_level: 10
+  te_level: 20
+  runs_remaining: 36
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Magnetometric Sensor Cluster Blueprint
+  source_bpo: Capital Magnetometric Sensor Cluster
+  me_level: 10
+  te_level: 20
+  runs_remaining: 200
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Oscillator Capacitor Unit Blueprint
+  source_bpo: Capital Oscillator Capacitor Unit
+  me_level: 10
+  te_level: 20
+  runs_remaining: 200
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Photon Microprocessor Blueprint
+  source_bpo: Capital Photon Microprocessor
+  me_level: 10
+  te_level: 20
+  runs_remaining: 200
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Propulsion Engine Blueprint
+  source_bpo: Capital Propulsion Engine
+  me_level: 10
+  te_level: 20
+  runs_remaining: 4
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Pulse Shield Emitter Blueprint
+  source_bpo: Capital Pulse Shield Emitter
+  me_level: 10
+  te_level: 20
+  runs_remaining: 41
+  location: UALX-3 - The Science Lounge
+  category: capital_components
+  materials: {}
+- name: Capital Tractor Beam I Blueprint
+  source_bpo: Capital Tractor Beam I
+  me_level: 0
+  te_level: 0
+  runs_remaining: 5
+  location: UALX-3 - The Science Lounge
+  category: modules_t1
+  materials: {}
+- name: Heron Blueprint
+  source_bpo: Heron
+  me_level: 0
+  te_level: 0
+  runs_remaining: 5
+  location: UALX-3 - The Science Lounge
+  category: ships
+  materials: {}
+- name: Hexa 2500mm Repeating Cannon I Blueprint
+  source_bpo: Hexa 2500mm Repeating Cannon I
+  me_level: 6
+  te_level: 0
+  runs_remaining: 5
+  location: UALX-3 - The Science Lounge
+  category: modules_t1
+  materials: {}
+- name: Maulus Blueprint
+  source_bpo: Maulus
+  me_level: 10
+  te_level: 20
+  runs_remaining: 3
+  location: UALX-3 - The Science Lounge
+  category: ships
+  materials: {}
+- name: Nanite Repair Paste Blueprint
+  source_bpo: Nanite Repair Paste
+  me_level: 10
+  te_level: 4
+  runs_remaining: 600
+  location: UALX-3 - The Science Lounge
+  category: consumables
+  materials: {}
+- name: Navitas Blueprint
+  source_bpo: Navitas
+  me_level: 5
+  te_level: 2
+  runs_remaining: 5
+  location: Trossere VII - Moon 3 - University of Caille
+  category: ships
+  materials: {}
+- name: Obelisk Blueprint
+  source_bpo: Obelisk
+  me_level: 10
+  te_level: 16
+  runs_remaining: 1
+  location: UALX-3 - The Science Lounge
+  category: ships
+  materials: {}
+- name: Oxygen Fuel Block Blueprint
+  source_bpo: Oxygen Fuel Block
+  me_level: 10
+  te_level: 0
+  runs_remaining: 200
+  location: UALX-3 - The Science Lounge
+  category: fuel_consumables
+  materials: {}
+- name: Quad 3500mm Siege Artillery I Blueprint
+  source_bpo: Quad 3500mm Siege Artillery I
+  me_level: 7
+  te_level: 0
+  runs_remaining: 5
+  location: UALX-3 - The Science Lounge
+  category: modules_t1
+  materials: {}
+- name: R.A.M.- Starship Tech Blueprint
+  source_bpo: R.A.M.- Starship Tech
+  me_level: 10
+  te_level: 20
+  runs_remaining: 57
+  location: UALX-3 - The Science Lounge
+  category: miscellaneous
+  materials: {}
+- name: Shield Extension Charge Blueprint
+  source_bpo: Shield Extension Charge
+  me_level: 0
+  te_level: 0
+  runs_remaining: 5
+  location: UALX-3 - The Science Lounge
+  category: ammunition_charges
+  materials: {}
+- name: Triage Module I Blueprint
+  source_bpo: Triage Module I
+  me_level: 7
+  te_level: 0
+  runs_remaining: 3
+  location: UALX-3 - The Science Lounge
+  category: modules_t1
+  materials: {}

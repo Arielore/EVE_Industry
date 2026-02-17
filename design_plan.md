@@ -10,6 +10,10 @@ EVE_INDUSTRY/
 ├── pyproject.toml
 ├── README.md
 ├── .gitignore
+├── check_recipes.py
+├── test_export.py
+├── test_enhanced_export.py
+├── design_plan.md
 ├── src/
 │   └── eve_industry/
 │       ├── __init__.py
@@ -28,36 +32,47 @@ EVE_INDUSTRY/
 │       │   │   ├── bpo_list_view.py
 │       │   │   ├── bpc_inventory_view.py
 │       │   │   ├── recipes_view.py
+│       │   │   ├── recipes_view_fixed.py
 │       │   │   ├── facilities_view.py
-│       │   │   └── settings_view.py
+│       │   │   ├── intake_view.py
+│       │   │   └── sde_view.py
 │       │   ├── dialogs/
 │       │   │   ├── __init__.py
-│       │   │   ├── import_recipe_dialog.py
-│       │   │   ├── facility_edit_dialog.py
-│       │   │   └── bpo_edit_dialog.py
-│       │   └── widgets/
+│       │   ├── widgets/
 │       │       ├── __init__.py
-│       │       └── refresh_button.py
 │       ├── modules/
 │       │   ├── __init__.py
-│       │   ├── price_fetcher.py
-│       │   ├── esi_client.py
-│       │   └── yaml_handler.py
+│       │   ├── yaml_handler.py
+│       │   └── sde_importer.py
 │       └── styles/
 │           └── dark_theme.qss
 ├── data/
 │   ├── initial/
 │   │   ├── bpos.yaml
 │   │   ├── bpcs.yaml
-│   │   ├── recipes.yaml
-│   │   └── facilities.yaml
+│   │   ├── facilities.yaml
+│   │   └── eve-online-static-data-3201939-yaml.zip
 │   ├── database/
 │   │   └── industry.duckdb
-│   └── exports/
+│   ├── exports/
+│   └── sde/
+│       └── parquet/
+│           ├── categories.parquet
+│           ├── groups.parquet
+│           ├── industryActivity.parquet
+│           ├── industryActivityMaterials.parquet
+│           ├── industryActivityProducts.parquet
+│           ├── industryActivitySkills.parquet
+│           ├── marketGroups.parquet
+│           ├── typeMaterials.parquet
+│           └── types.parquet
 └── tests/
     ├── __init__.py
-    ├── test_database.py
-    └── test_import.py
+    ├── test_app_start.py
+    ├── test_db_simple.py
+    ├── test_db.py
+    ├── test_duckdb_syntax.py
+    └── test_final.py
 
 ## pyproject.toml
 
@@ -153,124 +168,23 @@ Table: metadata
 ## Initial YAML Files
 
 data/initial/bpos.yaml:
-bpos:
-
-- name: "Capital Capacitor Battery"
-    me_level: 9
-    te_level: 18
-    location: "Keberz"
-    category: "capital_components"
-    materials:
-      Tritanium: 500000
-      Pyerite: 250000
-      Mexallon: 100000
-      Isogen: 50000
-      Nocxium: 10000
-      Zydrine: 5000
-      Megacyte: 2000
-- name: "Oxygen Fuel Block"
-    me_level: 10
-    te_level: 10
-    location: "UALX-3"
-    category: "fuel"
-    materials:
-      Tritanium: 500
-      Pyerite: 250
-      Mexallon: 100
-      Isogen: 50
-      LiquidOzone: 100
-      HeavyWater: 50
-- name: "XL Cruise Missile Launcher"
-    me_level: 8
-    te_level: 0
-    location: "Keberz"
-    category: "capital_components"
-    materials:
-      Tritanium: 300000
-      Pyerite: 150000
-      Mexallon: 75000
-      Isogen: 30000
-      Nocxium: 5000
-      Zydrine: 2500
-      Megacyte: 1000
+- Contains initial Blueprint Original (BPO) data
+- Sample BPOs: Capital Capacitor Battery, Oxygen Fuel Block, XL Cruise Missile Launcher
+- Used for initial database population
 
 data/initial/facilities.yaml:
-facilities:
-
-- name: "Empire Reforged"
-    system: "Keberz"
-    region: "Khanid"
-    facility_type: "Azbel"
-    owner: "Brave Empire"
-    services: ["manufacturing", "research", "invention"]
-    manufacturing_slots: 10
-    research_slots: 8
-    cost_index: 0.035
-    rigs:
-  - name: "Standup L-Set Basic Ship Manufacturing Efficiency I"
-        bonus: "-2% time"
-    notes: "Main Empire manufacturing hub"
-- name: "Starforge of Bravery"
-    system: "UALX-3"
-    region: "The Citadel"
-    facility_type: "Sotiyo"
-    owner: "Brave Collective"
-    services: ["manufacturing", "research", "invention"]
-    manufacturing_slots: 15
-    research_slots: 10
-    cost_index: 0.0659
-    rigs:
-  - name: "Standup XL-Set Ship Manufacturing Efficiency I"
-        bonus: "-3% material"
-    notes: "Capital manufacturing disabled"
-- name: "The Science Lounge"
-    system: "UALX-3"
-    region: "The Citadel"
-    facility_type: "Sotiyo"
-    owner: "Brave Collective"
-    services: ["research", "invention"]
-    manufacturing_slots: 0
-    research_slots: 20
-    cost_index: 0.0659
-    rigs:
-  - name: "Standup XL-Set Laboratory Optimization I"
-        bonus: "-2% time"
-    notes: "Research and invention only"
+- Contains initial facility data
+- Sample facilities: Empire Reforged, Starforge of Bravery, The Science Lounge
+- Used for initial database population
 
 data/initial/bpcs.yaml:
-bpcs:
+- Contains initial Blueprint Copy (BPC) data
+- Sample BPCs: T2 Light Missile Launcher
+- Used for initial database population
 
-- name: "T2 Light Missile Launcher"
-    source_bpo: "Light Missile Launcher"
-    runs_remaining: 10
-    location: "Keberz"
-    category: "module_t2"
-    materials:
-      Tritanium: 2000
-      Pyerite: 1000
-      Mexallon: 500
-      Isogen: 200
-      Morphite: 50
-
-data/initial/recipes.yaml:
-recipes:
-
-- name: "T2 Light Missile Launcher"
-    recipe_type: "BPC"
-    base_item: "Light Missile Launcher"
-    me_level: 2
-    te_level: 2
-    materials:
-      Tritanium: 2000
-      Pyerite: 1000
-      Mexallon: 500
-      Isogen: 200
-      Morphite: 50
-    upgrade_paths:
-  - type: "invention"
-        datacores: 8
-        decryptor: "Test Reports"
-        chance: 0.4
+Note: recipes.yaml file has been removed as recipes currently contain only sample data.
+Recipe export functionality has been disabled in yaml_handler.py to prevent creating
+recipes.yaml files with fake sample data during exports.
 
 ## Main Window Design
 
@@ -286,12 +200,14 @@ BPO List View:
 - QTableWidget with columns: Name, ME, TE, Location, Category
 - Refresh button and Add BPO button above table
 - Double-click row to open edit dialog
+- Loads data from database, falls back to sample data if empty
 
 BPC Inventory View:
 
 - QTableWidget with columns: Name, Source BPO, Runs, Location, Category
 - Refresh button and Add BPC button above table
 - Rows with runs < 10 are color-coded yellow
+- Loads data from database, falls back to sample data if empty
 
 Recipes View:
 
@@ -299,19 +215,29 @@ Recipes View:
 - Tree categories: "BPO Recipes" (by category), "BPC Recipes" (by source), "PI Components" (by tier)
 - Recipe details include name, type, material requirements table, upgrade paths
 - Add Recipe and Edit Recipe buttons
+- Uses sample data for demonstration
 
 Facilities View:
 
 - QTableWidget with columns: Name, System, Type, Owner, Manufacturing Slots, Research Slots, Cost Index
 - Refresh, Add Facility, Import YAML, Export YAML buttons above table
 - Double-click row to open facility edit dialog with tabs for basic info, services, rigs, notes
+- Uses sample data for demonstration
 
-Settings View:
+Intake View:
 
-- Database path configuration
-- Import/Export buttons for YAML (all tables)
-- Default trade hub selection (Jita, Amarr, etc.)
-- Cache duration settings for price fetcher
+- Handles import and export of YAML data files
+- Import from YAML: Loads BPOs, BPCs, facilities, recipes from YAML files
+- Export to YAML: Exports BPOs, BPCs, facilities, SDE blueprints (recipes not exported)
+- Progress dialogs with threading for background operations
+- Shows database statistics
+
+SDE View:
+
+- Handles Static Data Export (SDE) import functionality
+- Loads EVE Online SDE data from Parquet files
+- Creates database views for types, groups, categories, industry activities
+- Provides SDE blueprint data for export
 
 ## Dialogs
 
@@ -354,7 +280,9 @@ esi_client.py:
 
 yaml_handler.py:
 
-- Import/export facilities, recipes, BPOs from/to YAML
+- Import/export facilities, BPOs, BPCs from/to YAML
+- Import recipes from YAML (recipes are not exported as they contain only sample data)
+- Export SDE blueprint data when SDE is loaded
 - Validate YAML structure against schemas
 - Convert between YAML and database formats
 

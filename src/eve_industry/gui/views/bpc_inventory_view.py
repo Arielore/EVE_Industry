@@ -4,45 +4,52 @@ Displays Blueprint Copies with run counts and color-coding for low runs.
 """
 
 from PySide6.QtWidgets import (
-    QWidget, QVBoxLayout, QHBoxLayout, QTableWidget,
-    QTableWidgetItem, QPushButton, QHeaderView
+    QWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QTableWidget,
+    QTableWidgetItem,
+    QPushButton,
+    QHeaderView,
 )
 from PySide6.QtGui import QColor
+
+from eve_industry.database.loader import get_bpcs_from_db
 
 
 class BPCInventoryView(QWidget):
     """View for displaying and managing BPCs."""
-    
+
     def __init__(self):
         super().__init__()
         self.init_ui()
         self.load_data()
-    
+
     def init_ui(self):
         """Initialize the UI components."""
         layout = QVBoxLayout(self)
-        
+
         # Toolbar with buttons
         toolbar = QHBoxLayout()
-        
+
         refresh_btn = QPushButton("Refresh")
         refresh_btn.clicked.connect(self.refresh_data)
         toolbar.addWidget(refresh_btn)
-        
+
         add_btn = QPushButton("Add BPC")
         add_btn.clicked.connect(self.add_bpc)
         toolbar.addWidget(add_btn)
-        
+
         toolbar.addStretch()
         layout.addLayout(toolbar)
-        
+
         # Create table
         self.table = QTableWidget()
         self.table.setColumnCount(5)
-        self.table.setHorizontalHeaderLabels([
-            "Name", "Source BPO", "Runs", "Location", "Category"
-        ])
-        
+        self.table.setHorizontalHeaderLabels(
+            ["Name", "Source BPO", "Runs", "Location", "Category"]
+        )
+
         # Configure table
         header = self.table.horizontalHeader()
         header.setSectionResizeMode(0, QHeaderView.Stretch)  # Name column stretches
@@ -50,26 +57,38 @@ class BPCInventoryView(QWidget):
         header.setSectionResizeMode(2, QHeaderView.ResizeToContents)  # Runs
         header.setSectionResizeMode(3, QHeaderView.ResizeToContents)  # Location
         header.setSectionResizeMode(4, QHeaderView.ResizeToContents)  # Category
-        
+
         self.table.setAlternatingRowColors(True)
         self.table.setEditTriggers(QTableWidget.NoEditTriggers)
         self.table.doubleClicked.connect(self.edit_bpc)
-        
+
         layout.addWidget(self.table)
-    
+
     def load_data(self):
         """Load BPC data into the table."""
-        # TODO: Load actual data from database
-        # For now, create sample data
-        self.table.setRowCount(3)
+        bpcs = get_bpcs_from_db()
         
-        sample_data = [
-            ("T2 Light Missile Launcher", "Light Missile Launcher", 10, "Keberz", "module_t2"),
-            ("T2 Medium Shield Extender", "Medium Shield Extender", 5, "UALX-3", "module_t2"),
-            ("T2 Warp Scrambler", "Warp Scrambler", 2, "Keberz", "module_t2")
-        ]
+        if not bpcs:
+            # Fallback to sample data if no BPCs in database
+            print("No BPCs found in database, using sample data")
+            bpcs = [
+                {"name": "T2 Light Missile Launcher", "source_bpo": "Light Missile Launcher", 
+                 "runs_remaining": 10, "location": "Keberz", "category": "module_t2"},
+                {"name": "T2 Medium Shield Extender", "source_bpo": "Medium Shield Extender", 
+                 "runs_remaining": 5, "location": "UALX-3", "category": "module_t2"},
+                {"name": "T2 Warp Scrambler", "source_bpo": "Warp Scrambler", 
+                 "runs_remaining": 2, "location": "Keberz", "category": "module_t2"}
+            ]
         
-        for row, (name, source_bpo, runs, location, category) in enumerate(sample_data):
+        self.table.setRowCount(len(bpcs))
+        
+        for row, bpc in enumerate(bpcs):
+            name = bpc.get('name', '')
+            source_bpo = bpc.get('source_bpo', '')
+            runs = bpc.get('runs_remaining', 0)
+            location = bpc.get('location', '')
+            category = bpc.get('category', '')
+            
             self.table.setItem(row, 0, QTableWidgetItem(name))
             self.table.setItem(row, 1, QTableWidgetItem(source_bpo))
             
@@ -81,20 +100,27 @@ class BPCInventoryView(QWidget):
             
             self.table.setItem(row, 3, QTableWidgetItem(location))
             self.table.setItem(row, 4, QTableWidgetItem(category))
-    
+        
+        if bpcs:
+            print(f"Loaded {len(bpcs)} BPCs into table")
+
     def refresh_data(self):
         """Refresh the table data."""
         self.table.setRowCount(0)
         self.load_data()
-    
+
     def add_bpc(self):
         """Open dialog to add a new BPC."""
         # TODO: Implement BPC add dialog
         print("Add BPC clicked")
-    
+
     def edit_bpc(self, index):
         """Open dialog to edit the selected BPC."""
         row = index.row()
-        name = self.table.item(row, 0).text()
+        name_item = self.table.item(row, 0)
+        if name_item:
+            name = name_item.text()
+        else:
+            name = "Unknown"
         # TODO: Implement BPC edit dialog
         print(f"Edit BPC: {name}")
